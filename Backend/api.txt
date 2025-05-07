@@ -1,0 +1,74 @@
+************************************************ Registragion api ************************************************
+http://localhost:3000/api/auth/register
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "username": "john123",
+  "email": "john@example.com",
+  "password": "Test@1234",
+  "phone": "1234567890",
+  "address": "123 Main St",
+  "city": "New York",
+  "state": "NY",
+  "country": "USA",
+  "zip": "10001",
+  "gender": "Male",
+  "dob": "1995-08-15",
+  "profilePicture": "http://example.com/profile.jpg"
+}
+
+
+************************************************ Login api ************************************************
+
+http://localhost:3000/api/auth/login
+
+Request : 
+{
+  "email": "john@example.com",
+  "password": "Test@1234"
+}
+
+Responce : 
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ2NDM1Mzg2fQ.uUAT6ZklKCA6-KpaobKCwpAYmCdnIs7sJJ96uN-1VgA"
+}
+
+
+************************************************ POST Product api ************************************************
+
+http://localhost:3000/api/products
+
+{
+  "title": "The Alchemist",
+  "description": "A journey of self-discovery.",
+  "price": 399,
+  "qty": 100,
+  "imageUrl": "https://example.com/alchemist.jpg"
+}
+
+
+************************************************ GET All Product api ************************************************
+
+http://localhost:3000/api/products?page=1&search=alchemist&sort=price&order=asc
+
+
+************************************************ GET Product by ID api ************************************************
+
+http://localhost:3000/api/products/1
+
+
+************************************************ PUT Product api ************************************************
+
+http://localhost:3000/api/products/1
+
+Request : 
+{
+  "title": "The Alchemist (Updated)",
+  "price": 450
+}
+
+************************************************ DELETE Product api ************************************************
+
+http://localhost:3000/api/products/1
+
